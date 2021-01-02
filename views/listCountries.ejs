@@ -1,0 +1,43 @@
+
+<style>
+   
+    table,
+    th,
+    td {
+        padding: 5px;
+        border: 1px solid black;
+    }
+</style>
+
+
+<h1>Countries</h1>
+
+
+<a href="/addCountry" class="button">Add Country</a>
+
+
+</br></br>
+
+
+<table>
+    
+    <tr>
+        <th>Code</th>
+        <th>Name</th>
+        <th>Details</th>
+        <th>Action</th>
+    </tr>
+<% countries.forEach((country) => { %>
+   
+    <tr>
+        <td><%= country.co_code %></td>
+        <td><%= country.co_name %></td>
+        <td><%= country.co_details %></td>
+        <td><a href="/edit/<%= country.co_code %>">Update</a></td>
+        <td><a href="/delete/<%= country.co_code %>">Delete</a></td>
+    </tr>
+<% }) %>
+</table>
+
+
+<a href="/">Home</a>

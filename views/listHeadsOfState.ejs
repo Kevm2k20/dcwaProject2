@@ -1,0 +1,36 @@
+
+<style>
+    
+    table,
+    th,
+    td {
+        padding: 5px;
+        border: 1px solid black;
+    }
+</style>
+
+
+<h1>Heads Of State</h1>
+
+
+<a href="/addHeadOfState" class="button">Add Head of State</a>
+
+</br></br>
+
+<table>
+ 
+    <tr>
+        <th>Country Code</th>
+        <th>Head of State</th>
+    </tr>
+<% headsOfState.forEach((headOfState) => { %>
+  
+    <tr>
+        <td><%= headOfState._id %></td>
+        <td><%= headOfState.headOfState %></td>
+    </tr>
+<% }) %>
+</table>
+
+
+<a href="/">Home</a>

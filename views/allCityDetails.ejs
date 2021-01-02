@@ -1,0 +1,46 @@
+
+<h1>All City Details</h1>
+
+
+<% cities.forEach((city) => { %>
+
+    <form action="/cityDetails/<%=city.cty_code%>" method="GET">
+ 
+        <label>City Code:</label>
+        <input type="text" name="cty_code" value="<%=city.cty_code%>">
+    
+        <br>
+      
+        <label>City Name:</label>
+        <input type="text" name="cty_name" value="<%=city.cty_name%>">
+     
+        <br>
+      
+        <label>City Population:</label>
+        <input type="text" name="population" value="<%=city.population%>">
+     
+        <br>
+        
+        <label>By the Sea:</label>
+        <input type="text" name="isCoastal" value="<%=city.isCoastal%>">
+        
+        <br>
+       
+        <label>Area(KM):</label>
+        <input type="text" name="areaKM" value="<%=city.areaKM%>">
+       
+        <br><br>
+      
+        <label>Country Code:</label>
+        <input type="text" name="co_code" value="<%=city.co_code%>">
+     
+        <br>
+      
+        <label>Country Name:</label>
+        <input type="text" name="co_name" value="<%=city.co_name%>">
+        
+        <br>
+    </form>
+<% }) %>
+
+<a href="/">Home</a>
